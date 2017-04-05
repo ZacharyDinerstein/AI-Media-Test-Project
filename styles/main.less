@@ -1,0 +1,177 @@
+/*VARIABLES*/
+@full-page-padding: inherit 100px; 
+@site-padding: 12px;
+
+
+/*Colors*/
+@gold: #e4f303;
+@site-white: #fdfdfd;
+@site-grey: #f0f0f0;
+
+
+/*GLOBAL RULES*/
+.test {
+	background-color: blue;
+	height: 50px;
+}
+
+body {
+	.container-fluid {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+}
+
+h1, h2, h3 {
+	margin: 0px;
+	padding: 0px;
+}
+
+.float-right {
+	float: right;
+}
+
+.group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.border-box {
+	box-sizing: border-box;
+}
+
+
+/*BUTTONS*/
+button {
+	border: 1px solid lightgrey;
+}
+
+.gold-faded-button, .gold-button {
+	background-color: @gold;
+}
+
+
+/*TEXT*/
+.logo {
+	font-size: 2.7em;
+	border-bottom: 1px solid white;
+	padding-top: @site-padding;
+	padding-bottom: @site-padding;
+	margin-bottom: @site-padding;
+}
+.slogan {
+	font-size: 1em;
+	padding-bottom: @site-padding;
+	font-style: italic;
+}
+.large-text {
+	font-size: 1.5em;
+	font-weight: 700;
+	letter-spacing: .07em;
+}
+.largest-text {
+	font-size: 2em;
+	letter-spacing: .08em;
+	font-weight: 700;
+}
+.bold-text{
+
+}
+.header-main {
+	font-size: 2.4em;
+	font-weight: 700;
+	letter-spacing: .02em;
+}
+.small-text {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: .85em;
+	line-height: 1.42857143;
+	color: #333;
+	font-weight: normal;
+}
+
+.submission-form-header {
+	text-align: center;
+	font-weight: 700;
+}
+
+/*FORMS*/
+.form-group{
+	.form-control {
+		border-radius: 0px;
+		margin-bottom: 8px;
+	}
+	button {
+		padding: 3px 0px;
+		width: 100%;
+	}
+}
+
+
+
+
+/*** NAVBAR ***/
+header {
+	p {
+		margin: 0px;
+		padding: 0px;
+	}
+	.navbar-default {
+		border: 0px;
+		border-color: transparent;
+		background-color: @gold;
+		.active {
+			background-color: @site-white;
+		}
+		&.navbar {
+			border-radius: 0px;
+			margin-bottom: 0px;
+			height: auto;
+			float: none;
+			ul {
+				&.navbar-nav {
+					float: none;
+				}
+				li{
+					display: inline-block;
+					float: none;
+				}
+			}
+		}
+		&.first-nav {
+			background-color: red;
+			color: white;
+		}
+		&.second-nav {
+			text-align: center;
+			margin-bottom: @site-padding;
+		}
+	}
+	.nav-tabs {
+		border: 0px;
+	}
+	.navbar {
+		height: auto;
+	}
+	.number-section {
+		height: 105px;
+		.bottom-align-text {
+			position: absolute;
+			bottom: 5px;
+		}
+	}
+}
+
+main {
+	.header-main-text-container {
+		text-align: right;
+	}
+	.submission-form-container {
+		background-color: @site-grey;
+		padding: @site-padding;
+	}
+}
+
+
+

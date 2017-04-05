@@ -1,0 +1,138 @@
+/*VARIABLES*/
+/*Colors*/
+/*GLOBAL RULES*/
+.test {
+  background-color: blue;
+  height: 50px;
+}
+body .container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+h1,
+h2,
+h3 {
+  margin: 0px;
+  padding: 0px;
+}
+.float-right {
+  float: right;
+}
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.border-box {
+  box-sizing: border-box;
+}
+/*BUTTONS*/
+button {
+  border: 1px solid lightgrey;
+}
+.gold-faded-button,
+.gold-button {
+  background-color: #e4f303;
+}
+/*TEXT*/
+.logo {
+  font-size: 2.7em;
+  border-bottom: 1px solid white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+.slogan {
+  font-size: 1em;
+  padding-bottom: 12px;
+  font-style: italic;
+}
+.large-text {
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: .07em;
+}
+.largest-text {
+  font-size: 2em;
+  letter-spacing: .08em;
+  font-weight: 700;
+}
+.header-main {
+  font-size: 2.4em;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+.small-text {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: .85em;
+  line-height: 1.42857143;
+  color: #333;
+  font-weight: normal;
+}
+.submission-form-header {
+  text-align: center;
+  font-weight: 700;
+}
+/*FORMS*/
+.form-group .form-control {
+  border-radius: 0px;
+  margin-bottom: 8px;
+}
+.form-group button {
+  padding: 3px 0px;
+  width: 100%;
+}
+/*** NAVBAR ***/
+header p {
+  margin: 0px;
+  padding: 0px;
+}
+header .navbar-default {
+  border: 0px;
+  border-color: transparent;
+  background-color: #e4f303;
+}
+header .navbar-default .active {
+  background-color: #fdfdfd;
+}
+header .navbar-default.navbar {
+  border-radius: 0px;
+  margin-bottom: 0px;
+  height: auto;
+  float: none;
+}
+header .navbar-default.navbar ul.navbar-nav {
+  float: none;
+}
+header .navbar-default.navbar ul li {
+  display: inline-block;
+  float: none;
+}
+header .navbar-default.first-nav {
+  background-color: red;
+  color: white;
+}
+header .navbar-default.second-nav {
+  text-align: center;
+  margin-bottom: 12px;
+}
+header .nav-tabs {
+  border: 0px;
+}
+header .navbar {
+  height: auto;
+}
+header .number-section {
+  height: 105px;
+}
+header .number-section .bottom-align-text {
+  position: absolute;
+  bottom: 5px;
+}
+main .header-main-text-container {
+  text-align: right;
+}
+main .submission-form-container {
+  background-color: #f0f0f0;
+  padding: 12px;
+}
