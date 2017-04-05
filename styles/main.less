@@ -1,14 +1,25 @@
 /*VARIABLES*/
 @full-page-padding: inherit 100px; 
 @site-spacing: 12px;
+@site-spacing-double: 24px;
 @larger-spacing: 14px;
 
 
 /*Colors*/
-@gold: #e4f303;
+@site-gold: #e0ba4c;
+@site-lite-gold: #ebdf8a;
 @site-white: #fdfdfd;
-@site-grey: #f0f0f0;
+@site-grey: #ddd;
+@site-purple: #152b83;
+@site-blue: #00a6da;
 
+.gold {
+	background-color: @site-gold;
+}
+
+.blue {
+	background-color: @site-blue;
+}
 
 /*GLOBAL RULES*/
 .test {
@@ -46,26 +57,45 @@ h1, h2, h3 {
 /*BUTTONS*/
 button {
 	border: 1px solid lightgrey;
+	&.flat-button {
+		display: block;
+		width: 100%;
+		margin-bottom: 30px;
+		text-align: left;
+		padding: 14px 26px;
+		border: none;
+		color: white;
+		letter-spacing: .034em;
+	}
+	&.short {
+		width: auto;
+		text-align: center;
+	}
 }
 
 .gold-faded-button, .gold-button {
-	background-color: @gold;
+	background-color: @site-gold;
 }
+
 
 
 /*TEXT*/
-.logo {
-	font-size: 2.7em;
-	border-bottom: 1px solid white;
-	padding-top: @site-spacing;
-	padding-bottom: @site-spacing;
-	margin-bottom: @site-spacing;
+* {
+	font-family: 'Noto Sans', sans-serif;
 }
-.slogan {
-	font-size: 1em;
-	padding-bottom: @site-spacing;
-	font-style: italic;
+
+nav {
+	.nav {
+		li {
+			.nav-font {
+				color: #152b83;
+				font-weight: 500;
+				letter-spacing: 0.05em;
+			}
+		}
+	}
 }
+
 .large-text {
 	font-size: 1.5em;
 	font-weight: 700;
@@ -79,8 +109,10 @@ button {
 .main-text{
 	font-size: 1.3em;
 }
-.bold-text{
-
+.small-bold-text {
+	font-size: 1.2em;
+	font-weight: 500;
+	letter-spacing: .04em;
 }
 .header-main {
 	font-size: 2.4em;
@@ -91,7 +123,6 @@ button {
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: .85em;
 	line-height: 1.42857143;
-	color: #333;
 	font-weight: normal;
 }
 
@@ -115,7 +146,7 @@ button {
 
 
 
-/*** NAVBAR ***/
+/*** BODY ***/
 header {
 	p {
 		margin: 0px;
@@ -124,9 +155,15 @@ header {
 	.navbar-default {
 		border: 0px;
 		border-color: transparent;
-		background-color: @gold;
+		background-color: @site-gold;
 		.active {
 			background-color: @site-white;
+		}
+		.logo {
+			width: 337px;
+			height: 92px;
+			margin: 10px 0px;
+			max-width: 421px;
 		}
 		&.navbar {
 			border-radius: 0px;
@@ -137,19 +174,27 @@ header {
 				&.navbar-nav {
 					float: none;
 				}
-				li{
+				li {
 					display: inline-block;
 					float: none;
 				}
 			}
 		}
 		&.first-nav {
-			background-color: red;
+			background-color: @site-purple;
 			color: white;
 		}
 		&.second-nav {
 			text-align: center;
-			margin-bottom: @site-spacing;
+			background-image:
+				-webkit-linear-gradient(@site-lite-gold, @site-gold);
+			background-image:
+				-o-linear-gradient(@site-lite-gold, @site-gold);
+			background-image:
+				linear-gradient(@site-lite-gold, @site-gold);;
+		}
+		&.first-nav, &.second-nav {
+			z-index: 2;
 		}
 	}
 	.nav-tabs {
@@ -167,7 +212,13 @@ header {
 	}
 }
 
+
 main {
+	padding-top: @site-spacing;
+	background-image: url(../img/meeting.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0px -61px;
 	.header-main-text-container {
 		text-align: right;
 		margin-bottom: @site-spacing;
@@ -176,13 +227,91 @@ main {
 		background-color: @site-grey;
 		padding: @site-spacing;
 	}
+	.main-section-top{
+		border-bottom: 1px #ddd solid;
+		margin-bottom: @site-spacing;
+		padding-bottom: 12px;
+	}
 	.main-message-section {
-		margin: @larger-spacing;
+		p:first-of-type {
+			margin-bottom: 12px;
+		}
+		padding: @larger-spacing;
+		background-color: @site-white;
+		background: -webkit-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1) 10%); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1) 10%); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1) 10%); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255, 1) 10%); /* Standard syntax (must be last) */
+		iframe {
+			width: 61%;
+			height: 216px;
+		}
 		.main-message-img {
-			
+			border: 6px solid gold;
+			width: 390px;
+			height: 390px;
+			border-radius: 50%;
+			position: absolute;
+			top: -11%;
+			right: -13%;
+			z-index: 0;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0 0 @site-spacing 0;
+		}
+
+		li {
+			padding-left: 1em; 
+			text-indent: -.7em;
+		}
+
+		li::before {
+			content: "• ";
+			color: @site-gold;
+		}
+		.main-message-img {
+			background-image: url(../img/meeting.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: -68px -168%;
+		}
+		.main-message-img-footprint {
+			width: 390px;
+			height: 390px;
+			float: right;
+			shape-outside: circle(50% at 81% -31%);
 		}
 	}
 }
 
+footer {
+	background-color: @site-purple;
+	padding: @site-spacing 0px;
+	color: @site-white;
+	p {
+		margin: 0px;
+		color: @site-white;
+		&.small-bold-text {
+			color: @site-gold;
+		}
+		a {
+			color: @site-gold;
+		}
+	}
+	.footer-left-section, .footer-middle-section {
+		border-right: 1px solid @site-white;
+	}
+	.footer-left-section{
+		p {
+			margin-bottom: @site-spacing-double;
+		}
+		img {
+			margin-bottom: 13px;
+			margin-top: 22px;
+		}
+	}
+}
 
 

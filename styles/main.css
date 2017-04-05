@@ -1,5 +1,11 @@
 /*VARIABLES*/
 /*Colors*/
+.gold {
+  background-color: #e0ba4c;
+}
+.blue {
+  background-color: #00a6da;
+}
 /*GLOBAL RULES*/
 .test {
   background-color: blue;
@@ -30,22 +36,32 @@ h3 {
 button {
   border: 1px solid lightgrey;
 }
+button.flat-button {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: left;
+  padding: 14px 26px;
+  border: none;
+  color: white;
+  letter-spacing: .034em;
+}
+button.short {
+  width: auto;
+  text-align: center;
+}
 .gold-faded-button,
 .gold-button {
-  background-color: #e4f303;
+  background-color: #e0ba4c;
 }
 /*TEXT*/
-.logo {
-  font-size: 2.7em;
-  border-bottom: 1px solid white;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  margin-bottom: 12px;
+* {
+  font-family: 'Droid Sans Mono', monospace;
 }
-.slogan {
-  font-size: 1em;
-  padding-bottom: 12px;
-  font-style: italic;
+nav .nav li .nav-font {
+  color: #152b83;
+  font-weight: 500;
+  letter-spacing: 0.05em;
 }
 .large-text {
   font-size: 1.5em;
@@ -60,6 +76,11 @@ button {
 .main-text {
   font-size: 1.3em;
 }
+.small-bold-text {
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: .04em;
+}
 .header-main {
   font-size: 2.4em;
   font-weight: 700;
@@ -69,7 +90,6 @@ button {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: .85em;
   line-height: 1.42857143;
-  color: #333;
   font-weight: normal;
 }
 .submission-form-header {
@@ -85,7 +105,7 @@ button {
   padding: 3px 0px;
   width: 100%;
 }
-/*** NAVBAR ***/
+/*** BODY ***/
 header p {
   margin: 0px;
   padding: 0px;
@@ -93,10 +113,16 @@ header p {
 header .navbar-default {
   border: 0px;
   border-color: transparent;
-  background-color: #e4f303;
+  background-color: #e0ba4c;
 }
 header .navbar-default .active {
   background-color: #fdfdfd;
+}
+header .navbar-default .logo {
+  width: 337px;
+  height: 92px;
+  margin: 10px 0px;
+  max-width: 421px;
 }
 header .navbar-default.navbar {
   border-radius: 0px;
@@ -112,12 +138,18 @@ header .navbar-default.navbar ul li {
   float: none;
 }
 header .navbar-default.first-nav {
-  background-color: red;
+  background-color: #152b83;
   color: white;
 }
 header .navbar-default.second-nav {
   text-align: center;
-  margin-bottom: 12px;
+  background-image: -webkit-linear-gradient(#ebdf8a, #e0ba4c);
+  background-image: -o-linear-gradient(#ebdf8a, #e0ba4c);
+  background-image: linear-gradient(#ebdf8a, #e0ba4c);
+}
+header .navbar-default.first-nav,
+header .navbar-default.second-nav {
+  z-index: 2;
 }
 header .nav-tabs {
   border: 0px;
@@ -132,14 +164,103 @@ header .number-section .bottom-align-text {
   position: absolute;
   bottom: 5px;
 }
+main {
+  padding-top: 12px;
+  background-image: url(../img/meeting.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px -61px;
+}
 main .header-main-text-container {
   text-align: right;
   margin-bottom: 12px;
 }
 main .submission-form-container {
-  background-color: #f0f0f0;
+  background-color: #ddd;
   padding: 12px;
 }
+main .main-section-top {
+  border-bottom: 1px #ddd solid;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+}
 main .main-message-section {
-  margin: 14px;
+  padding: 14px;
+  background-color: #fdfdfd;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #ffffff 10%);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0), #ffffff 10%);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0), #ffffff 10%);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff 10%);
+  /* Standard syntax (must be last) */
+}
+main .main-message-section p:first-of-type {
+  margin-bottom: 12px;
+}
+main .main-message-section iframe {
+  width: 61%;
+  height: 216px;
+}
+main .main-message-section .main-message-img {
+  border: 6px solid gold;
+  width: 390px;
+  height: 390px;
+  border-radius: 50%;
+  position: absolute;
+  top: -11%;
+  right: -13%;
+  z-index: 0;
+}
+main .main-message-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px 0;
+}
+main .main-message-section li {
+  padding-left: 1em;
+  text-indent: -0.7em;
+}
+main .main-message-section li::before {
+  content: "• ";
+  color: #e0ba4c;
+}
+main .main-message-section .main-message-img {
+  background-image: url(../img/meeting.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -68px -168%;
+}
+main .main-message-section .main-message-img-footprint {
+  width: 390px;
+  height: 390px;
+  float: right;
+  shape-outside: circle(50% at 81% -31%);
+}
+footer {
+  background-color: #152b83;
+  padding: 12px 0px;
+  color: #fdfdfd;
+}
+footer p {
+  margin: 0px;
+  color: #fdfdfd;
+}
+footer p.small-bold-text {
+  color: #e0ba4c;
+}
+footer p a {
+  color: #e0ba4c;
+}
+footer .footer-left-section,
+footer .footer-middle-section {
+  border-right: 1px solid #fdfdfd;
+}
+footer .footer-left-section p {
+  margin-bottom: 24px;
+}
+footer .footer-left-section img {
+  margin-bottom: 13px;
+  margin-top: 22px;
 }
