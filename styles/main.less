@@ -1,6 +1,7 @@
 /*VARIABLES*/
 @full-page-padding: inherit 100px; 
-@site-padding: 12px;
+@site-spacing: 12px;
+@larger-spacing: 14px;
 
 
 /*Colors*/
@@ -56,13 +57,13 @@ button {
 .logo {
 	font-size: 2.7em;
 	border-bottom: 1px solid white;
-	padding-top: @site-padding;
-	padding-bottom: @site-padding;
-	margin-bottom: @site-padding;
+	padding-top: @site-spacing;
+	padding-bottom: @site-spacing;
+	margin-bottom: @site-spacing;
 }
 .slogan {
 	font-size: 1em;
-	padding-bottom: @site-padding;
+	padding-bottom: @site-spacing;
 	font-style: italic;
 }
 .large-text {
@@ -74,6 +75,9 @@ button {
 	font-size: 2em;
 	letter-spacing: .08em;
 	font-weight: 700;
+}
+.main-text{
+	font-size: 1.3em;
 }
 .bold-text{
 
@@ -145,7 +149,7 @@ header {
 		}
 		&.second-nav {
 			text-align: center;
-			margin-bottom: @site-padding;
+			margin-bottom: @site-spacing;
 		}
 	}
 	.nav-tabs {
@@ -166,10 +170,17 @@ header {
 main {
 	.header-main-text-container {
 		text-align: right;
+		margin-bottom: @site-spacing;
 	}
 	.submission-form-container {
 		background-color: @site-grey;
-		padding: @site-padding;
+		padding: @site-spacing;
+	}
+	.main-message-section {
+		margin: @larger-spacing;
+		.main-message-img {
+			
+		}
 	}
 }
 

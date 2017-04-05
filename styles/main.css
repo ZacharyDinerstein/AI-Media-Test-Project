@@ -57,6 +57,9 @@ button {
   letter-spacing: .08em;
   font-weight: 700;
 }
+.main-text {
+  font-size: 1.3em;
+}
 .header-main {
   font-size: 2.4em;
   font-weight: 700;
@@ -131,8 +134,12 @@ header .number-section .bottom-align-text {
 }
 main .header-main-text-container {
   text-align: right;
+  margin-bottom: 12px;
 }
 main .submission-form-container {
   background-color: #f0f0f0;
   padding: 12px;
+}
+main .main-message-section {
+  margin: 14px;
 }
