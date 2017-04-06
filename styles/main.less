@@ -398,6 +398,27 @@ footer {
 
 /*MEDIA QUERIES*/
 
+/*Medium/Large Screen -- 1363px wide and below*/
+@media only screen and (max-width: 1363px) {
+	main {
+		.main-message-section {
+			.main-message-img {
+				width: 315px;
+				height: 315px;
+				top: -6%;
+				right: -13%;
+			}
+			.main-message-img-footprint {
+				width: 315px;
+				height: 315px;
+				shape-outside: circle(50% at 86% -49%);	
+			}
+		}
+	}
+
+}
+
+
 /*Medium Screen -- 1274px wide and below*/
 @media only screen and (max-width: 1274px) {
 	header {
@@ -409,6 +430,25 @@ footer {
 	}
 }
 
+/*Bootstrap Medium Screen -- 1200px wide and below*/
+@media only screen and (max-width: 1200px) {
+	main {
+		.main-message-img, .main-message-img-footprint {
+			display: none;
+		}
+		.header-main-text-container {
+			text-align: center;
+			h3:last-child {
+				padding-left: 0px;
+			}
+		}
+		.main-section-bottom {
+			padding: 12px;
+		}
+	}
+}
+
+
 /*Small Screen -- 991px wide and below*/
 @media only screen and (max-width: 991px) {
 	header {
@@ -417,6 +457,9 @@ footer {
 				padding: @site-spacing;
 			}
 		}
+	}
+	footer {
+		padding: @site-spacing;
 	}
 }
 
