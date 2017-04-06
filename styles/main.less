@@ -175,6 +175,7 @@ header {
 		margin: 0px;
 		padding: 0px;
 	}
+	/*OLD NAVBAR CSS (possibly outdated)*/
 	.navbar-default {
 		border: 0px;
 		border-color: transparent;
@@ -220,6 +221,27 @@ header {
 			z-index: 2;
 		}
 	}
+
+	/*NEW NAVBAR CSS*/
+	.second-nav {
+		text-align: center;
+	    background-image: -webkit-linear-gradient(#ebdf8a, #e0ba4c);
+	    background-image: -o-linear-gradient(#ebdf8a, #e0ba4c);
+	    background-image: linear-gradient(#ebdf8a, #e0ba4c);
+	    margin-bottom: 0px;
+	    border: 0px;
+		.navbar-nav {
+			float: none;
+			li {
+				display: inline-block;
+				float: none;
+			}
+		}
+	}
+	.navbar-static-top {
+		border: 0px;
+	}
+
 	.nav-tabs {
 		border: 0px;
 	}
@@ -415,6 +437,16 @@ footer {
 			}
 			.largest-text {
 				font-size: @mobile-screen-size-largest-text;
+			}
+		}
+		.second-nav {
+			.navbar-nav {
+				li {
+					display: block;
+				}
+			}
+			.navbar-collapse {
+				border: 0px;
 			}
 		}
 	}

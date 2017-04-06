@@ -115,6 +115,10 @@ nav .nav li .nav-font {
   width: 100%;
 }
 /*** BODY ***/
+header {
+  /*OLD NAVBAR CSS (possibly outdated)*/
+  /*NEW NAVBAR CSS*/
+}
 header p {
   margin: 0px;
   padding: 0px;
@@ -159,6 +163,24 @@ header .navbar-default.second-nav {
 header .navbar-default.first-nav,
 header .navbar-default.second-nav {
   z-index: 2;
+}
+header .second-nav {
+  text-align: center;
+  background-image: -webkit-linear-gradient(#ebdf8a, #e0ba4c);
+  background-image: -o-linear-gradient(#ebdf8a, #e0ba4c);
+  background-image: linear-gradient(#ebdf8a, #e0ba4c);
+  margin-bottom: 0px;
+  border: 0px;
+}
+header .second-nav .navbar-nav {
+  float: none;
+}
+header .second-nav .navbar-nav li {
+  display: inline-block;
+  float: none;
+}
+header .navbar-static-top {
+  border: 0px;
 }
 header .nav-tabs {
   border: 0px;
@@ -337,5 +359,11 @@ footer .footer-left-section img {
   }
   header .number-section .largest-text {
     font-size: 1.2em;
+  }
+  header .second-nav .navbar-nav li {
+    display: block;
+  }
+  header .second-nav .navbar-collapse {
+    border: 0px;
   }
 }
