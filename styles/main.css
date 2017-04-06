@@ -6,6 +6,7 @@
 .blue {
   background-color: #00a6da;
 }
+/*font sizes*/
 /*GLOBAL RULES*/
 .test {
   background-color: blue;
@@ -56,17 +57,17 @@ button.short {
 }
 /*TEXT*/
 * {
-  font-family: 'Droid Sans Mono', monospace;
+  font-family: 'Noto Sans', sans-serif;
 }
 nav .nav li .nav-font {
   color: #152b83;
-  font-weight: 500;
-  letter-spacing: 0.05em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
 }
 .large-text {
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 700;
-  letter-spacing: .07em;
+  letter-spacing: .08em;
 }
 .largest-text {
   font-size: 2em;
@@ -84,11 +85,11 @@ nav .nav li .nav-font {
 .header-main {
   font-size: 2.4em;
   font-weight: 700;
-  letter-spacing: .02em;
+  letter-spacing: .01em;
 }
 .small-text {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: .85em;
+  font-size: 0.85em;
   line-height: 1.42857143;
   font-weight: normal;
 }
@@ -138,7 +139,7 @@ header .navbar-default.navbar ul li {
   float: none;
 }
 header .navbar-default.first-nav {
-  background-color: #152b83;
+  background-color: #330085;
   color: white;
 }
 header .navbar-default.second-nav {
@@ -162,7 +163,11 @@ header .number-section {
 }
 header .number-section .bottom-align-text {
   position: absolute;
-  bottom: 5px;
+  bottom: 0px;
+}
+header .number-section .bottom-align-text p:first-child {
+  position: relative;
+  top: 6px;
 }
 main {
   padding-top: 12px;
@@ -175,9 +180,26 @@ main .header-main-text-container {
   text-align: right;
   margin-bottom: 12px;
 }
+main .header-main-text-container h2:first-child {
+  margin-bottom: 6px;
+}
+main .header-main-text-container h3:last-child {
+  margin-top: 6px;
+  padding-left: 14%;
+}
 main .submission-form-container {
   background-color: #ddd;
   padding: 12px;
+}
+main .submission-form-container .form-check-label {
+  margin-bottom: 12px;
+}
+main .submission-form-container .form-check-label input {
+  float: left;
+  margin-top: 5px;
+}
+main .submission-form-container .form-check-label div {
+  margin-left: 25px;
 }
 main .main-section-top {
   border-bottom: 1px #ddd solid;
@@ -239,7 +261,7 @@ main .main-message-section .main-message-img-footprint {
   shape-outside: circle(50% at 81% -31%);
 }
 footer {
-  background-color: #152b83;
+  background-color: #330085;
   padding: 12px 0px;
   color: #fdfdfd;
 }

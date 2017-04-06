@@ -2,6 +2,7 @@
 @full-page-padding: inherit 100px; 
 @site-spacing: 12px;
 @site-spacing-double: 24px;
+@smaller-spacing: 6px;
 @larger-spacing: 14px;
 
 
@@ -10,7 +11,7 @@
 @site-lite-gold: #ebdf8a;
 @site-white: #fdfdfd;
 @site-grey: #ddd;
-@site-purple: #152b83;
+@site-purple: #330085;
 @site-blue: #00a6da;
 
 .gold {
@@ -20,6 +21,15 @@
 .blue {
 	background-color: @site-blue;
 }
+
+/*font sizes*/
+@large-text: 1.3em;
+@largest-text: 2em;
+@main-text-size: 1.3em;
+@small-bold-text-size: 1.2em;
+@header-main-size: 2.4em;
+@small-text-size: .85em;
+
 
 /*GLOBAL RULES*/
 .test {
@@ -89,39 +99,39 @@ nav {
 		li {
 			.nav-font {
 				color: #152b83;
-				font-weight: 500;
-				letter-spacing: 0.05em;
+				font-weight: 700;
+				letter-spacing: 0.06em;
 			}
 		}
 	}
 }
 
 .large-text {
-	font-size: 1.5em;
-	font-weight: 700;
-	letter-spacing: .07em;
+	font-size: @large-text;
+    font-weight: 700;
+    letter-spacing: .08em;
 }
 .largest-text {
-	font-size: 2em;
+	font-size: @largest-text;
 	letter-spacing: .08em;
 	font-weight: 700;
 }
-.main-text{
-	font-size: 1.3em;
+.main-text {
+	font-size: @main-text-size;
 }
 .small-bold-text {
-	font-size: 1.2em;
+	font-size: @small-bold-text-size;
 	font-weight: 500;
 	letter-spacing: .04em;
 }
 .header-main {
-	font-size: 2.4em;
+	font-size: @header-main-size;
 	font-weight: 700;
-	letter-spacing: .02em;
+	letter-spacing: .01em;
 }
 .small-text {
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size: .85em;
+	font-size: @small-text-size;
 	line-height: 1.42857143;
 	font-weight: normal;
 }
@@ -207,7 +217,11 @@ header {
 		height: 105px;
 		.bottom-align-text {
 			position: absolute;
-			bottom: 5px;
+			bottom: 0px;
+			p:first-child {
+				position: relative;
+				top: 6px;
+			}
 		}
 	}
 }
@@ -222,10 +236,27 @@ main {
 	.header-main-text-container {
 		text-align: right;
 		margin-bottom: @site-spacing;
+		h2:first-child{
+			margin-bottom: @smaller-spacing;
+		}
+		h3:last-child {
+			margin-top: @smaller-spacing;
+			padding-left: 14%;
+		}
 	}
 	.submission-form-container {
 		background-color: @site-grey;
 		padding: @site-spacing;
+		.form-check-label {
+			margin-bottom: @site-spacing;
+			input {
+				float: left; 
+				margin-top: 5px;
+			}
+			div {
+				margin-left: 25px;
+			}
+		}
 	}
 	.main-section-top{
 		border-bottom: 1px #ddd solid;
