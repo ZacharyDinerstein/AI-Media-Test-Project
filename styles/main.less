@@ -30,6 +30,13 @@
 @header-main-size: 2.4em;
 @small-text-size: .85em;
 
+/*font sizes on smaller screens*/
+@med-screen-size-largest-text: 1.5em;
+
+/*font sizes on mobile screens*/
+@mobile-screen-size-largest-text: 1.2em;
+@mobile-screen-size-large-text: 1.2em;
+
 
 /*GLOBAL RULES*/
 .test {
@@ -130,7 +137,7 @@ nav {
 	letter-spacing: .01em;
 }
 .small-text {
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	/*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
 	font-size: @small-text-size;
 	line-height: 1.42857143;
 	font-weight: normal;
@@ -249,6 +256,20 @@ main {
 			margin-top: @smaller-spacing;
 			padding-left: 14%;
 		}
+		button {
+			letter-spacing: .05em;
+			font-size: .9em;
+			padding: 5px 30px;
+			background: #e0ba4c; /* For browsers that do not support gradients */
+			/* For Safari 5.1 to 6.0 */
+			background: linear-gradient(to right, #e0ba4c, #ebdf8a, #e0ba4c);
+			/* For Opera 11.1 to 12.0 */
+			background: linear-gradient(to right, #e0ba4c, #ebdf8a, #e0ba4c);
+			/* For Fx 3.6 to 15 */
+			background: linear-gradient(to right, #e0ba4c, #ebdf8a, #e0ba4c);
+			/* Standard syntax */
+			background: linear-gradient(to right, #e0ba4c, #ebdf8a, #e0ba4c);
+		}
 	}
 	.submission-form-container {
 		background-color: @site-grey;
@@ -282,6 +303,7 @@ main {
 		iframe {
 			width: 61%;
 			height: 216px;
+			margin-bottom: 12px;
 		}
 		.main-message-img {
 			border: 6px solid gold;
@@ -347,6 +369,53 @@ footer {
 		img {
 			margin-bottom: 13px;
 			margin-top: 22px;
+		}
+	}
+}
+
+
+/*MEDIA QUERIES*/
+
+/*Medium Screen -- 1274px wide and below*/
+@media only screen and (max-width: 1274px) {
+	header {
+		.number-section {
+			.largest-text {
+				font-size: @med-screen-size-largest-text;
+			}
+		}
+	}
+}
+
+/*Small Screen -- 991px wide and below*/
+@media only screen and (max-width: 991px) {
+	header {
+		.navbar-default {
+			&.first-nav {
+				padding: @site-spacing;
+			}
+		}
+	}
+}
+
+/*Mobile Screen -- 767px wide and below*/
+@media only screen and (max-width: 767px) {
+	header {
+		.logo-container {
+			text-align: center;
+		}
+		.number-section {
+			text-align: center;
+			height: auto;
+			.bottom-align-text {
+				position: static;
+			}
+			.large-text {
+				font-size: @mobile-screen-size-large-text;
+			}
+			.largest-text {
+				font-size: @mobile-screen-size-largest-text;
+			}
 		}
 	}
 }

@@ -7,6 +7,8 @@
   background-color: #00a6da;
 }
 /*font sizes*/
+/*font sizes on smaller screens*/
+/*font sizes on mobile screens*/
 /*GLOBAL RULES*/
 .test {
   background-color: blue;
@@ -79,7 +81,7 @@ nav .nav li .nav-font {
 }
 .small-bold-text {
   font-size: 1.2em;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: .04em;
 }
 .header-main {
@@ -88,7 +90,7 @@ nav .nav li .nav-font {
   letter-spacing: .01em;
 }
 .small-text {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
   font-size: 0.85em;
   line-height: 1.42857143;
   font-weight: normal;
@@ -104,8 +106,6 @@ nav .nav li .nav-font {
 }
 .form-group select.form-control {
   background-color: #ddd;
-  border-radius: 0px;
-  -webkit-appearance: none;
 }
 .form-group .checkbox-wrapper {
   background-color: red;
@@ -195,6 +195,18 @@ main .header-main-text-container h3:last-child {
   margin-top: 6px;
   padding-left: 14%;
 }
+main .header-main-text-container button {
+  letter-spacing: .05em;
+  font-size: .9em;
+  padding: 5px 30px;
+  background: #e0ba4c;
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Fx 3.6 to 15 */
+  /* Standard syntax */
+  background: linear-gradient(to right, #e0ba4c, #ebdf8a, #e0ba4c);
+}
 main .submission-form-container {
   background-color: #ddd;
   padding: 12px;
@@ -232,6 +244,7 @@ main .main-message-section p:first-of-type {
 main .main-message-section iframe {
   width: 61%;
   height: 216px;
+  margin-bottom: 12px;
 }
 main .main-message-section .main-message-img {
   border: 6px solid gold;
@@ -293,4 +306,36 @@ footer .footer-left-section p {
 footer .footer-left-section img {
   margin-bottom: 13px;
   margin-top: 22px;
+}
+/*MEDIA QUERIES*/
+/*Medium Screen -- 1274px wide and below*/
+@media only screen and (max-width: 1274px) {
+  header .number-section .largest-text {
+    font-size: 1.5em;
+  }
+}
+/*Small Screen -- 991px wide and below*/
+@media only screen and (max-width: 991px) {
+  header .navbar-default.first-nav {
+    padding: 12px;
+  }
+}
+/*Mobile Screen -- 767px wide and below*/
+@media only screen and (max-width: 767px) {
+  header .logo-container {
+    text-align: center;
+  }
+  header .number-section {
+    text-align: center;
+    height: auto;
+  }
+  header .number-section .bottom-align-text {
+    position: static;
+  }
+  header .number-section .large-text {
+    font-size: 1.2em;
+  }
+  header .number-section .largest-text {
+    font-size: 1.2em;
+  }
 }
