@@ -102,6 +102,14 @@ nav .nav li .nav-font {
   border-radius: 0px;
   margin-bottom: 8px;
 }
+.form-group select.form-control {
+  background-color: #ddd;
+  border-radius: 0px;
+  -webkit-appearance: none;
+}
+.form-group .checkbox-wrapper {
+  background-color: red;
+}
 .form-group button {
   padding: 3px 0px;
   width: 100%;
