@@ -399,4 +399,7 @@ footer .footer-left-section img {
   header .second-nav .navbar-collapse {
     border: 0px;
   }
+  main .main-message-section iframe {
+    width: 100%;
+  }
 }
